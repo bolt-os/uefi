@@ -1,0 +1,17 @@
+[package]
+name = "uefi"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["alloc"]
+alloc = []
+limine = ["dep:limine"]
+
+[dependencies]
+bitflags = "<2"
+
+[dependencies.limine]
+git = "https://github.com/bolt-os/limine-rs"
+rev = "c84a9fc"
+optional = true
